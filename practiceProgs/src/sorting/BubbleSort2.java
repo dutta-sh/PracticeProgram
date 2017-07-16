@@ -1,8 +1,10 @@
+package sorting;
+
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class BubbleSort {
+public class BubbleSort2 {
 
 	private static List<Integer> arr = Arrays.asList(50, 30, 100, 40, 80, 60, 90, 20, 10, 70);
 	

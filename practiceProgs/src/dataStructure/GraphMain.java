@@ -1,3 +1,5 @@
+package dataStructure;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,9 +32,9 @@ public class GraphMain {
         System.out.println("Removed  {b, c}: " + graph.removeEdge(new Edge(b, c))); 			//true
         System.out.println("Contains {b, c}: " + graph.getEdges().contains(new Edge(b, c)));	//false
         System.out.println("Contains {c, d}: " + graph.getEdges().contains(new Edge(c, d)));	//false
-        System.out.println("Contains Vertex:a " + graph.getVertices().contains(b)); 			//true
-        System.out.println("Contains Vertex:f " + graph.getVertices().contains(new Vertex("f")));//false
-        System.out.println("Removed Vertex:c " + graph.removeVertex(c)); 						//true
+        System.out.println("Contains dataStructure.Vertex:a " + graph.getVertices().contains(b)); 			//true
+        System.out.println("Contains dataStructure.Vertex:f " + graph.getVertices().contains(new Vertex("f")));//false
+        System.out.println("Removed dataStructure.Vertex:c " + graph.removeVertex(c)); 						//true
         System.out.println("---------------------------------");
         System.out.println(graph); //a,b,e,d
     }

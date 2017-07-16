@@ -1,3 +1,5 @@
+package dataStructure;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -81,8 +83,8 @@ public class Trie {
 		
 		Trie javaTrie1 = new Trie();
 		javaTrie1.addSentence("Welcome to All Programming Tutorials");
-		javaTrie1.addSentence("Welcome to Trie Data Structure Tutorial");
-		javaTrie1.addSentence("Trie Data Structure Implementation in Java");
+		javaTrie1.addSentence("Welcome to dataStructure.Trie Data Structure Tutorial");
+		javaTrie1.addSentence("dataStructure.Trie Data Structure Implementation in Java");
 		
 		System.out.println(javaTrie1.containsWord("Programming"));
 		System.out.println(javaTrie1.containsWord("Tutorial"));

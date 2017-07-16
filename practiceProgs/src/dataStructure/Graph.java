@@ -1,3 +1,5 @@
+package dataStructure;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashSet;
@@ -8,7 +10,7 @@ class Vertex {
     
     public Vertex(String name){
     	if(name == null)
-    		throw new RuntimeException("Vertex name can't be null");
+    		throw new RuntimeException("dataStructure.Vertex name can't be null");
         this.name = name;
     }
 
@@ -57,9 +59,9 @@ class Edge {
     
     public Edge(Vertex v1, Vertex v2){
     	if(v1 == null || v2 == null)
-    		throw new RuntimeException("Vertices of Edge can't be null");
+    		throw new RuntimeException("Vertices of dataStructure.Edge can't be null");
     	if(v1.getName().compareTo(v2.getName()) == 0) {
-    		throw new RuntimeException("Can't create Edge within same Vertex " + v1);
+    		throw new RuntimeException("Can't create dataStructure.Edge within same dataStructure.Vertex " + v1);
     	} else if(v1.getName().compareTo(v2.getName()) < 0) {
     		this.v1 = v1;
     		this.v2 = v2;

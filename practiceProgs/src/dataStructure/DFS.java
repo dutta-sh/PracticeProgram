@@ -1,3 +1,5 @@
+package dataStructure;
+
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -96,7 +98,7 @@ public class DFS {
 				};
 
 		DFS dfsExample = new DFS();
-		System.out.println("The DFS traversal of the graph using stack ");
+		System.out.println("The dataStructure.DFS traversal of the graph using stack ");
 		dfsExample.dfsUsingStack(adjMatrix, nodeA);
 		System.out.println();
 	}
