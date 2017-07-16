@@ -1,4 +1,4 @@
-
+package cs570;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;

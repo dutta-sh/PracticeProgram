@@ -1,4 +1,4 @@
-package sorting;
+package cs570;
 
 import java.io.File;
 import java.util.Scanner;
@@ -139,7 +139,7 @@ public class SortedSet {
 	}
 	
 	public static void main(String[] args) throws Exception{
-		File inFile = new File("infile.dat");
+		File inFile = new File("cs570/infile.dat");
 		Scanner sc = new Scanner(inFile);
 		String input = sc.nextLine();
 		sc.close();

@@ -1,3 +1,5 @@
+package cs570;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,7 +12,7 @@ import java.util.Map;
 public class PracProg2 {
 
 	public static void main(String[] args) throws IOException {
-		String path = "input.txt";
+		String path = "cs570/input.txt";
 		//String path = "C:\\work\\workspace_CS570\\PracticeProgram\\src\\input.txt";
 		byte[] byteArr = Files.readAllBytes(Paths.get(path));
 		String contents = new String(byteArr);
@@ -60,7 +62,7 @@ public class PracProg2 {
 		byte[] data= str.getBytes();
 		FileOutputStream out;
 		try {
-			out = new FileOutputStream("output.txt");
+			out = new FileOutputStream("cs570/output.txt");
 			out.write(data);
 			out.close();
 		} catch (Exception e) {

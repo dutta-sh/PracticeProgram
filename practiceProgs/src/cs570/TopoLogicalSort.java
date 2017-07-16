@@ -1,4 +1,4 @@
-package sorting;
+package cs570;
 
 import java.io.File;
 import java.util.*;

@@ -1,4 +1,4 @@
-
+package cs570;
 
 public class Ex1 {
 

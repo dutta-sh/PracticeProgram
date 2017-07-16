@@ -1,4 +1,4 @@
-package sorting;
+package cs570;
 
 /**
  * Created by Shouvik on 7/13/2017.

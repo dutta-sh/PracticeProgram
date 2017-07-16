@@ -1,3 +1,5 @@
+package dataStructure;
+
 /**
  * Created by Shouvik on 7/5/2017.
  */
@@ -14,11 +16,11 @@ public class LinkedListExample {
             end.setNext(newNode);
             end = newNode;
 
-//            Node node = start;
+//            dataStructure.Node node = start;
 //            while(node.getNext() != null)
 //                node = node.getNext();
 //
-//            Node last = new Node(val);
+//            dataStructure.Node last = new dataStructure.Node(val);
 //            node.setNext(last);
         }
     }

@@ -1,3 +1,5 @@
+package cs570;
+
 import java.util.Scanner;
 
 public class PracProg3 {

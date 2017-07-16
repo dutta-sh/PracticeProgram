@@ -1,4 +1,4 @@
-package sorting;
+package cs570;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class TopoSort {
 	}
 	
 	public static void main(String args[]) throws Exception {
-		File f = new File("infile.dat");
+		File f = new File("cs570/infile.dat");
 		Scanner in = new Scanner(f);
 		String countOfNodes = in.nextLine();
 		

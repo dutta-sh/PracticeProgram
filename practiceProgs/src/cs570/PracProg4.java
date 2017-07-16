@@ -1,3 +1,4 @@
+package cs570;
 
 public class PracProg4 {
 	private static int[]x = new int[]{50, 100, 30, 80, 70, 40, 60, 20,90, 10};

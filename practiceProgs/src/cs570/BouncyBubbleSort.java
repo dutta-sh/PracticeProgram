@@ -1,4 +1,4 @@
-package sorting;/*
+package cs570;/*
   GROUP DETAILS
   =============
   GROUP MEMBERS	: PARAS GARG & PAROMITA DATTA

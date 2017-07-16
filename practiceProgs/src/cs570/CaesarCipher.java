@@ -1,4 +1,4 @@
-/*
+package cs570;/*
   GROUP DETAILS
   =============
   GROUP MEMBERS	: PAROMITA DATTA, & PARAS GARG
@@ -60,7 +60,7 @@ public class CaesarCipher{
 		byte[] data = decipherMessage.getBytes();
 		FileOutputStream out;
 		try {
-			out = new FileOutputStream("solution.txt");
+			out = new FileOutputStream("cs570/solution.txt");
 			out.write(data);
 			out.close();
 		} catch (Exception e) {
