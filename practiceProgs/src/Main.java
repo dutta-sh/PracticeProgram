@@ -1,3 +1,5 @@
+import java.util.Date;
+
 class Main
 {
     static boolean hasArrayTwoCandidates(int A[], int sum)
@@ -21,6 +23,8 @@ class Main
     //main function
     public static void main(String args[])
     {
+        System.out.println(new Date().getTime());
+
         int A[] = {10, 11, 19, 20};
         int n = 30;
 
