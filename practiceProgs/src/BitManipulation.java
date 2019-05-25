@@ -9,5 +9,7 @@ public class BitManipulation {
         System.out.println(0xaaaaaaaa);
         System.out.println(0b10101010101010101010101010101010);
 
+
+        java.util.LinkedList list = new java.util.LinkedList();
     }
 }

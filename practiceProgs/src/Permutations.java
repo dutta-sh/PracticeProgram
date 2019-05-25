@@ -6,7 +6,7 @@ import java.util.List;
 public class Permutations {
 
     public static void main(String[] args) {
-        System.out.println(permutations("ABCD"));
+        permutations("ABCD");
     }
 
     private static List<String> permutations(String str) {
@@ -28,6 +28,7 @@ public class Permutations {
                 permutations.add(temp);
             }
         }
+        System.out.println(":::" + permutations);
         return permutations;
     }
 }
