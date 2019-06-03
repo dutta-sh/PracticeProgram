@@ -1,13 +1,13 @@
 public class ReversedLinkedList {
 
-    private static MyNode h;
+    private static ListNode h;
 
     public static void main(String[] args) {
-        MyNode n1 = new MyNode();  n1.val = 10;
-        MyNode n2 = new MyNode();  n2.val = 20;
-        MyNode n3 = new MyNode();  n3.val = 30;
-        MyNode n4 = new MyNode();  n4.val = 40;
-        MyNode n5 = new MyNode();  n5.val = 50;
+        ListNode n1 = new ListNode(10);
+        ListNode n2 = new ListNode(20);
+        ListNode n3 = new ListNode(30);
+        ListNode n4 = new ListNode(40);
+        ListNode n5 = new ListNode(50);
 
         n1.next = n2; n2.next = n3; n3.next = n4; n4.next = n5;
 
@@ -28,14 +28,14 @@ public class ReversedLinkedList {
         System.out.println("null");
     }
 
-    public static void reverseRec(MyNode node, MyNode nextNode) {
+    public static void reverseRec(ListNode node, ListNode nextNode) {
         if (nextNode == null) {
             h = node;
             return;
             //return node;
         }
 
-//        MyNode here = reverseRec(nextNode, nextNode.next);
+//        ListNode here = reverseRec(nextNode, nextNode.next);
 //        here.next = node;
 //        node.next = null;
 //
@@ -46,16 +46,16 @@ public class ReversedLinkedList {
         node.next = null;
     }
 
-    public static MyNode reverseList(MyNode head) {
+    public static ListNode reverseList(ListNode head) {
         if(head == null || head.next == null)
             return head;
 
-        MyNode p1 = head;
-        MyNode p2 = p1.next;
+        ListNode p1 = head;
+        ListNode p2 = p1.next;
 
         p1.next = null;
         while(p1 != null && p2 != null){
-            MyNode t = p2.next;
+            ListNode t = p2.next;
             p2.next = p1;
             p1 = p2;
             p2 = t;
@@ -63,10 +63,4 @@ public class ReversedLinkedList {
 
         return p1;
     }
-}
-
-
-class MyNode {
-    int val;
-    MyNode next;
 }
