@@ -10,7 +10,7 @@ public class ReverselinkedList {
         System.out.println(reversed);
     }
 
-    private static LinkedList reverse(Node node, LinkedList reversed) {
+    private static LinkedList reverse(ListNode node, LinkedList reversed) {
         if(node != null) {
             reversed.push(node.val);
             reverse(node.next, reversed);
@@ -22,17 +22,16 @@ public class ReverselinkedList {
 
 class LinkedList {
 
-    Node head = null;
+    ListNode head = null;
 
     public void push(int val) {
-        Node newNode = new Node();
-        newNode.val = val;
+        ListNode newNode = new ListNode(val);
         newNode.next = head;
         head = newNode;
     }
 
     public String toString() {
-        Node node = head;
+        ListNode node = head;
         StringBuilder strBld = new StringBuilder();
         while(node != null) {
             strBld.append(node.val + " ");
@@ -40,9 +39,4 @@ class LinkedList {
         }
         return strBld.toString();
     }
-}
-
-class Node {
-    int val;
-    Node next;
 }
