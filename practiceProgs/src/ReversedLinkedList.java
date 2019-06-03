@@ -28,17 +28,22 @@ public class ReversedLinkedList {
         System.out.println("null");
     }
 
-    public static MyNode reverseRec(MyNode node, MyNode nextNode) {
+    public static void reverseRec(MyNode node, MyNode nextNode) {
         if (nextNode == null) {
             h = node;
-            return node;
+            return;
+            //return node;
         }
 
-        MyNode here = reverseRec(nextNode, nextNode.next);
-        here.next = node;
-        node.next = null;
+//        MyNode here = reverseRec(nextNode, nextNode.next);
+//        here.next = node;
+//        node.next = null;
+//
+//        return node;
 
-        return node;
+        reverseRec(nextNode, nextNode.next);
+        node.next.next = node;
+        node.next = null;
     }
 
     public static MyNode reverseList(MyNode head) {
