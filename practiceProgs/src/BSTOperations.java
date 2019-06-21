@@ -10,11 +10,24 @@ public class BSTOperations {
         root.right.left = new TreeNode(7);
         root.right.right = new TreeNode(9);
 
-        System.out.println(getLargest(root).val);
-        System.out.println(getSmallest(root).val);
+        System.out.println("isBST: " + isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
 
-        System.out.println(getSecLargest(root, root.left, root.right).val);
-        System.out.println(getSecSmallest(root, root.left, root.right).val);
+        System.out.println("largest: " + getLargest(root).val);
+        System.out.println("smallest: " + getSmallest(root).val);
+
+        System.out.println("2nd largest: " + getSecLargest(root, root.left, root.right).val);
+        System.out.println("2nd smallest: " + getSecSmallest(root, root.left, root.right).val);
+    }
+
+    private static boolean isBST(TreeNode n, int l, int r) {
+        if(n == null)
+            return true;
+
+        if(n.val > l && n.val < r)
+            return isBST(n.left, l, n.val) && isBST(n.right, n.val, r);
+
+        return false;
+
     }
 
     private static TreeNode getLargest(TreeNode n) {
