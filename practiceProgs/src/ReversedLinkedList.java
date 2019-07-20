@@ -42,7 +42,7 @@ public class ReversedLinkedList {
 //        return node;
 
         reverseRec(nextNode, nextNode.next);
-        node.next.next = node;
+        nextNode.next = node;
         node.next = null;
     }
 
