@@ -116,4 +116,44 @@ public class Amazon {
             }
         }
     }
+
+
+    public List<List<Integer>> sumToHundred(List<Integer> input) {
+
+        Map<Integer,Integer> found = new HashMap<>();
+        Map<Integer,Integer> expectation = new HashMap<>();
+        List<List<Integer>> output = new ArrayList<>();
+
+        for(int elem : input) {
+            if(expectation.containsKey(elem)) {
+                List<Integer> tuple = new ArrayList<>();
+                tuple.add(100 - elem, elem);
+                output.add(tuple);
+
+                int freq = expectation.get(elem);
+                if(freq > 1) {
+                    expectation.put(elem, --freq);
+                } else {
+                    expectation.remove(elem);
+                }
+
+                freq = found.get(elem);
+                if(freq > 1) {
+                    found.put(elem, --freq);
+                } else {
+                    found.remove(elem);
+                }
+
+            } else {
+                if(found.containsKey(elem)) {
+                    found.put(elem, found.get(elem)+1);
+                } else {
+                    found.put(elem, 1);
+                }
+
+            }
+        }
+        return output;
+
+    }
 }
