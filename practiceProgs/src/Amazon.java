@@ -35,10 +35,10 @@ public class Amazon {
     }
 
     public static void main(String[] args) {
-        List<String> s1 = Arrays.asList(new String[]{"a", "b"});
-        List<String> s2 = Arrays.asList(new String[]{"d", "e"});
-        List<String> s3 = Arrays.asList(new String[]{"c", "e"});
-        List<String> s4 = Arrays.asList(new String[]{"f", "g", "c"});
+        List<String> s1 = Arrays.asList("a", "b");
+        List<String> s2 = Arrays.asList("d", "e");
+        List<String> s3 = Arrays.asList("c", "e");
+        List<String> s4 = Arrays.asList("f", "g", "c");
 
         List<List<String>> list = new ArrayList<>();
         list.add(s1); list.add(s2); list.add(s3); list.add(s4);
@@ -71,7 +71,6 @@ public class Amazon {
     public static List<String> foo(List<List<String>> itemAssociation) {
         //generate the graph
         Map<String, MyNode> graph = new HashMap<>();
-        Set<String> visited = new HashSet<>();
         for(List<String> items : itemAssociation) {
             int size = items.size();
             for(int i = 0; i < size; i++) {
@@ -79,22 +78,23 @@ public class Amazon {
                 graph.put(items.get(i), node);
 
                 if(i != size - 1) {
-                    MyNode n1 = graph.getOrDefault(items.get(i + 1), new MyNode(items.get(i + 1)));
-                    node.addNeighbor(n1);
-                    n1.addNeighbor(node);
-                    graph.put(items.get(i + 1), n1);
+                    MyNode n = graph.getOrDefault(items.get(i + 1), new MyNode(items.get(i + 1)));
+                    node.addNeighbor(n);
+                    n.addNeighbor(node);
+                    graph.put(items.get(i + 1), n);
                 }
 
                 if(i != 0) {
-                    MyNode n2 = graph.getOrDefault(items.get(i - 1), new MyNode(items.get(i - 1)));
-                    node.addNeighbor(n2);
-                    n2.addNeighbor(node);
-                    graph.put(items.get(i - 1), n2);
+                    MyNode n = graph.getOrDefault(items.get(i - 1), new MyNode(items.get(i - 1)));
+                    node.addNeighbor(n);
+                    n.addNeighbor(node);
+                    graph.put(items.get(i - 1), n);
                 }
             }
         }
         System.out.println(graph);
 
+        Set<String> visited = new HashSet<>();
         Set<String> longest = new TreeSet<>();
         for(String s : graph.keySet()) {
             Set<String> thisVisit = new TreeSet<>();
@@ -103,6 +103,9 @@ public class Amazon {
             if(thisVisit.size() > longest.size())
                 longest = thisVisit;
         }
+
+        String s = "recur(t, )";
+        s.replaceAll("\\(\\)", "");
 
         return new ArrayList(longest);
     }
