@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Queue;
 
 public class LRUCache {
-    private Map<String, String> map = new HashMap();
+    private Map<String, String> map = new HashMap<>();
     private Queue<String> keys = new LinkedList<>();
     private Repo repo = new Repo();
     private int cacheSize = 5;
